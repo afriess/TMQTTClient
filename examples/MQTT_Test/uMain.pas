@@ -1,10 +1,12 @@
 unit uMain;
 
+{$MODE Delphi}
+
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, MQTT, MQTTReadThread, ExtCtrls, ShellAPI;
+  LCLIntf, LCLType, LMessages, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, MQTT, MQTTReadThread, ExtCtrls;
 
 type
   TfMain = class(TForm)
@@ -51,7 +53,7 @@ var
 
 implementation
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TfMain.OnPublish(Sender: TObject; topic, payload: string);
 begin
@@ -110,7 +112,7 @@ end;
 
 procedure TfMain.lblUrlClick(Sender: TObject);
 begin
-  ShellExecute(self.WindowHandle,'open',PChar((Sender as TLabel).Caption),nil,nil, SW_SHOWNORMAL);
+   OpenDocument(PChar((Sender as TLabel).Caption)); { *Konvertiert von ShellExecute* }
 end;
 
 end.

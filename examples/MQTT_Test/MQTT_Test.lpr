@@ -1,9 +1,11 @@
 program MQTT_Test;
 
+{$MODE Delphi}
+
 uses
-  Forms,
+  {$ifdef UNIX}cthreads,{$endif}
+  Forms, Interfaces,
   uMain in 'uMain.pas' {fMain},
-  SiAuto,
   MQTTReadThread in 'TMQTTClient\MQTTReadThread.pas',
   MQTT in 'TMQTTClient\MQTT.pas';
 
@@ -13,6 +15,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfMain, fMain);
-  Si.Enabled := True;
   Application.Run;
 end.
