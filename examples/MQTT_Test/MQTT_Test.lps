@@ -7,50 +7,62 @@
       <Unit0>
         <Filename Value="MQTT_Test.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
         <CursorPos Y="7"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
       <Unit1>
         <Filename Value="uMain.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="fMain"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMain"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="28"/>
+        <CursorPos X="22" Y="51"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
         <Filename Value="../../TMQTTClient/MQTT.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
+        <UnitName Value="MQTT"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="52"/>
+        <CursorPos X="3" Y="67"/>
         <UsageCount Value="20"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="../../TMQTTClient/MQTTReadThread.pas"/>
-        <UnitName Value="MQTTReadThread"/>
-        <EditorIndex Value="1"/>
-        <CursorPos Y="94"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="204"/>
+        <CursorPos X="27" Y="217"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
+    <JumpHistory Count="5" HistoryIndex="4">
       <Position1>
-        <Filename Value="MQTT_Test.lpr"/>
+        <Filename Value="uMain.pas"/>
       </Position1>
       <Position2>
-        <Filename Value="MQTT_Test.lpr"/>
-        <Caret Line="18" Column="5"/>
+        <Filename Value="uMain.pas"/>
       </Position2>
+      <Position3>
+        <Filename Value="../../TMQTTClient/MQTT.pas"/>
+        <Caret Line="53" Column="23" TopLine="7"/>
+      </Position3>
+      <Position4>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="9" Column="28" TopLine="9"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uMain.pas"/>
+        <Caret Line="51" Column="22" TopLine="28"/>
+      </Position5>
     </JumpHistory>
   </ProjectSession>
-  <SkipCheckLCLInterfaces Value="True"/>
 </CONFIG>

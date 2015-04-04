@@ -6,8 +6,7 @@ uses
   {$ifdef UNIX}cthreads,{$endif}
   Forms, Interfaces,
   uMain in 'uMain.pas' {fMain},
-  MQTTReadThread in 'TMQTTClient\MQTTReadThread.pas',
-  MQTT in 'TMQTTClient\MQTT.pas';
+  MQTTReadThread in 'TMQTTClient\MQTTReadThread.pas';
 
 {$R *.res}
 

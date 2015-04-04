@@ -167,7 +167,7 @@ begin
     begin
       MessageType := CurrentMessage.FixedHeader shr 4;
 
-      if (MessageType = Ord(MQTT.CONNACK)) then
+      if (MessageType = 2{CONACK}) then
         begin
           // Check if we were given a Connect Return Code.
           ConnectReturn := 0;
@@ -180,7 +180,7 @@ begin
           if Assigned(OnConnAck) then OnConnAck(Self, ConnectReturn);
         end
       else
-      if (MessageType = Ord(MQTT.PUBLISH)) then
+      if (MessageType = 3{PUBLISH}) then
         begin
           // Read the Length Bytes
           DataLen := BytesToStrLength(Copy(CurrentMessage.Data, 0, 2));
@@ -191,7 +191,7 @@ begin
           if Assigned(OnPublish) then OnPublish(Self, Topic, Payload);
         end
       else
-      if (MessageType = Ord(MQTT.SUBACK)) then
+      if (MessageType = 9{SUBACK}) then
         begin
           // Reading the Message ID
           ResponseVH := Copy(CurrentMessage.Data, 0, 2);
@@ -206,7 +206,7 @@ begin
           if Assigned(OnSubAck) then OnSubAck(Self, DataLen, QoS);
         end
       else
-      if (MessageType = Ord(MQTT.UNSUBACK)) then
+      if (MessageType = 11{UNSUBACK}) then
         begin
           // Read the Message ID for the event handler
           ResponseVH := Copy(CurrentMessage.Data, 0, 2);
@@ -214,7 +214,7 @@ begin
           if Assigned(OnUnSubAck) then OnUnSubAck(Self, DataLen);
         end
       else
-      if (MessageType = Ord(MQTT.PINGRESP)) then
+      if (MessageType = 13{PINGRESP}) then
         begin
           if Assigned(OnPingResp) then OnPingResp(Self);
         end;

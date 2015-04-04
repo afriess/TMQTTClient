@@ -31,12 +31,15 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="1">
+    <RequiredPackages Count="2">
       <Item1>
-        <PackageName Value="LCL"/>
+        <PackageName Value="LAZ_MQTT"/>
       </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="2">
       <Unit0>
         <Filename Value="MQTT_Test.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -44,13 +47,11 @@
       <Unit1>
         <Filename Value="uMain.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="fMain"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMain"/>
       </Unit1>
-      <Unit2>
-        <Filename Value="../../TMQTTClient/MQTT.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -60,7 +61,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="../../TMQTTClient;../../synapse"/>
-      <OtherUnitFiles Value="../../TMQTTClient;../../synapse"/>
+      <OtherUnitFiles Value="../../synapse"/>
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
