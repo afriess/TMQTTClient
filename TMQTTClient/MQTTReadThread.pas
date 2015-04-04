@@ -33,7 +33,7 @@ unit MQTTReadThread;
 interface
 
 uses
-  SysUtils, Classes, blcksock, BaseUnix;
+  SysUtils, Classes, blcksock;
 
 type TBytes = array of Byte;
 
@@ -112,7 +112,7 @@ begin
                 remainingLength := 0;
                 CurrentMessage.Data := nil;
                 CurrentMessage.FixedHeader := FPSocket^.RecvByte(1000);
-                if (FPSocket^.LastError = ESysETIMEDOUT) then continue;
+                if (FPSocket^.LastError <> 0) then continue;
                 if (FPSocket^.LastError <> 0) then
                   rxState := RX_ERROR
                 else
@@ -120,7 +120,7 @@ begin
             end;
         RX_LENGTH: begin
                 digit := FPSocket^.RecvByte(1000);
-                if (FPSocket^.LastError = ESysETIMEDOUT) then continue;
+                if (FPSocket^.LastError <> 0) then continue;
                 if (FPSocket^.LastError <> 0) then
                   rxState := RX_ERROR
                 else
