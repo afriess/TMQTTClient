@@ -2,21 +2,19 @@
 <CONFIG>
   <Package Version="4">
     <Name Value="LAZ_MQTT"/>
-    <Type Value="RunAndDesignTime"/>
     <CompilerOptions>
       <Version Value="11"/>
       <SearchPaths>
-        <OtherUnitFiles Value="TMQTTClient"/>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
     </CompilerOptions>
     <Files Count="2">
       <Item1>
-        <Filename Value="TMQTTClient/MQTT.pas"/>
+        <Filename Value="MQTT.pas"/>
         <UnitName Value="MQTT"/>
       </Item1>
       <Item2>
-        <Filename Value="TMQTTClient/MQTTReadThread.pas"/>
+        <Filename Value="MQTTReadThread.pas"/>
         <UnitName Value="MQTTReadThread"/>
       </Item2>
     </Files>

@@ -7,14 +7,8 @@ unit LAZ_MQTT;
 interface
 
 uses
-  MQTT, MQTTReadThread, LazarusPackageIntf;
+  MQTT, MQTTReadThread;
 
 implementation
 
-procedure Register;
-begin
-end;
-
-initialization
-  RegisterPackage('LAZ_MQTT', @Register);
 end.
