@@ -1,4 +1,4 @@
-# TMQTTClient Library Version 1.01 for Delphi by Jamie I
+# TMQTTClient Library Version 1.01 for Lazarus
 
 ## INTRODUCTION:
 TMQTTClient is a non-visual Delphi Client Library for the IBM Websphere MQ Transport Telemetry protocol ( http://mqtt.org ). It allows you to connect to a Message Broker that uses MQTT such as the Really Small Message Broker(http://alphaworks.ibm.com/tech/rsmb) which is freely available for evaluation purposes on IBM Alphaworks. 
@@ -9,10 +9,10 @@ http://publib.boulder.ibm.com/infocenter/wmbhelp/v6r0m0/index.jsp?topic=/com.ibm
 
 ## LIMITATIONS:
 This is not a reference implementation of the MQTT Protocol but does support both Publishing Messages and Subscribing to Topics with the following limitations: 
-	- It only allows and supports QoS 0 Messages. I havenít built QoS levels 1 or 2 in yet as I 	personally have no need for them but this is planned for future versions.
-	- You are required to schedule pinging the server yourself (using a TTimer for examples). 	The client library implements a ping command but doesnít automatically ping the server 	itself at regular intervals.
+	- It only allows and supports QoS 0 Messages. I haven‚Äôt built QoS levels 1 or 2 in yet as I 	personally have no need for them but this is planned for future versions.
+	- You are required to schedule pinging the server yourself (using a TTimer for examples). 	The client library implements a ping command but doesn‚Äôt automatically ping the server 	itself at regular intervals.
 
-Note: You should also be aware that it uses part of the Synapse Internet Communications Library for its Socket support so youíll need to ensure that this is available on your search path.
+Note: You should also be aware that it uses part of the Synapse Internet Communications Library for its Socket support so you‚Äôll need to ensure that this is available on your search path.
 
 
 ## USAGE:
@@ -32,6 +32,6 @@ end;
 ```
 
 
-Special Thanks go to Andy Stanford-Clark and Nick OíLeary for their help on various ìhiccupsî that I encountered while developing and testing TMQTTClient.
+Special Thanks go to Andy Stanford-Clark and Nick O‚ÄôLeary for their help on various ‚Äúhiccups‚Äù that I encountered while developing and testing TMQTTClient.
 
-If you are using my TMQTTClient in anything then Iíd love to hear about how youíre using it, please contact me and let me know what youíre using it for.
+If you are using my TMQTTClient in anything then I‚Äôd love to hear about how you‚Äôre using it, please contact me and let me know what you‚Äôre using it for.
