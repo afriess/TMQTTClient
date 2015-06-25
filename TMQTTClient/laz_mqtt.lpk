@@ -10,7 +10,7 @@
     </CompilerOptions>
     <Files Count="2">
       <Item1>
-        <Filename Value="MQTT.pas"/>
+        <Filename Value="mqtt.pas"/>
         <UnitName Value="MQTT"/>
       </Item1>
       <Item2>
