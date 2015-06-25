@@ -14,7 +14,7 @@
         <UnitName Value="MQTT"/>
       </Item1>
       <Item2>
-        <Filename Value="MQTTReadThread.pas"/>
+        <Filename Value="mqttreadthread.pas"/>
         <UnitName Value="MQTTReadThread"/>
       </Item2>
     </Files>

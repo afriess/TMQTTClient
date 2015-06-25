@@ -26,7 +26,7 @@
   -------------------------------------------------
 }
 
-{$mode objfpc} 
+{$mode objfpc}
 
 unit MQTTReadThread;
 
@@ -66,7 +66,7 @@ Type TRxStates = (RX_FIXED_HEADER, RX_LENGTH, RX_DATA, RX_ERROR);
     FSubAckEvent: TSubAckEvent;
     FUnSubAckEvent: TUnSubAckEvent;
     // This takes a 1-4 Byte Remaining Length bytes as per the spec and returns the Length value it represents
-    // Increases the size of the Dest array and Appends NewBytes to the end of DestArray 
+    // Increases the size of the Dest array and Appends NewBytes to the end of DestArray
     // Takes a 2 Byte Length array and returns the length of the ansistring it preceeds as per the spec.
     function BytesToStrLength(LengthBytes: TBytes): integer;
     // This is our data processing and event firing command. To be called via Synchronize.
@@ -142,7 +142,11 @@ begin
                   rxState := RX_ERROR
                 else
                 begin
+                  {$ifdef LCL}
                   Synchronize(@HandleData);
+                  {$else}
+                  HandleData;
+                  {$endif}
                   rxState := RX_FIXED_HEADER;
                 end;
             end;
